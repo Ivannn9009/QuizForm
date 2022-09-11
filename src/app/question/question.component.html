@@ -1,0 +1,73 @@
+<div class="container mt-5">
+    <div class="card">
+        <div class="d-flex justify-content-between p-3">
+            <div class="image">
+                <img src="https://img.icons8.com/bubbles/344/question-mark.png" style="width: 50%;" alt="image">
+            </div>
+            <div class="quiz-header">
+                <h4 style="font-family: cursive;">Welcome to the Quiz Form!</h4>
+                <span style="font-style: italic;">Hello {{name}}</span>
+            </div>
+        </div>
+
+
+        <ng-container *ngIf="!isQuizCompleted">
+            <div class="d-flex justify-content-around py-3">
+                <div class="score">
+                    <h5>{{points}}</h5>
+                </div>
+                <div class="question-remain">
+                    <span style="font-style: italic;">Question {{currentQuestion+1}} of {{questionList.length}}</span>
+                </div>
+                <div class="timer">
+                    <h5>{{counter}} sec
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                        <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
+                        <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"/>
+                        <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
+                      </svg>
+                    </h5>
+                </div>
+            </div>
+            <div class="progress mb-3">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" [ngStyle]="{'width':progress+'%'}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="question">
+                <div class="card">
+                    <h3>{{questionList[currentQuestion]?.questionText}}</h3>
+                </div>
+              </div>
+              <div class="options">
+                <ol *ngFor="let options of questionList[currentQuestion]?.options">
+                    <li (click)="answer(currentQuestion+1,options)">
+                        <div appChangeBg [isCorrect]="options.correct" class="card">
+                           {{options.text}}
+                        </div>
+                    </li>
+                </ol>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button [disabled]="currentQuestion===0" class="btn" (click)="prviousQuestion()"><i class="fa-solid text-danger fa-circle-chevron-left fa-3x"></i></button>
+                <button class="btn" (click)="resetQuix()"><i class="fa-solid text-primary fa-arrows-rotate fa-3x"></i></button>
+                <button class="btn" (click)="nexQuestion()"><i class="fa-solid text-success fa-circle-chevron-right fa-3x"></i></button>
+              </div>
+        </ng-container>
+        
+        <ng-container *ngIf="isQuizCompleted">
+            <div class="row d-flex justify-content-between">
+                <img style="width: 50%;" class="img-fluid col-sm-12-mx-auto" src="https://icon-library.com/images/bee-705412_960_720_6065.png" alt="">
+                <div class="result text-center col-md-6 col-sm-12">
+                    <h3>
+                        Contgratulations!! <br> You have completed the quiz. <br> Below is your result:
+                    </h3>
+                    <p>Total Question Attempted : {{questionList.length}} </p>
+                    <p>Total Correct Answered : {{correctAnswer}} </p>
+                    <p>Total Wrong Answered : {{inCorrectAnswer}} </p>
+                    <p>Your Score : {{points}} Points </p>
+                </div>
+            </div>
+        </ng-container>
+        
+
+    </div>
+</div>

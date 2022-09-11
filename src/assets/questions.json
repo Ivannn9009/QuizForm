@@ -1,0 +1,165 @@
+{
+    "questions": [{
+            "questionText": "Grand Central Terminal, Park Avenue, New York is the world`s?",
+            "options": [{
+                    "text": "largest railway station",
+                    "correct": true
+                },
+                {
+                    "text": "highest railway station"
+                },
+                {
+                    "text": "longest railway station"
+                },
+                {
+                    "text": "None of the above"
+                }
+            ],
+            "explanation": ""
+        },
+        {
+            "questionText": "Entomology is the science that studies?",
+            "options": [{
+                    "text": "Behavior of human beings"
+                },
+                {
+                    "text": "Insects",
+                    "correct": true
+                },
+                {
+                    "text": "The origin and history of technical and scientific terms"
+                },
+                {
+                    "text": "The formation of rocks"
+                }
+            ],
+            "explanation": ""
+        },
+        {
+            "questionText": "Eritrea, which became the 182nd member of the UN in 1993, is in the continent of?",
+            "options": [{
+                    "text": "Asia"
+                },
+                {
+                    "text": "Africa",
+                    "correct": true
+                },
+                {
+                    "text": "Use enums."
+                },
+                {
+                    "text": "Use async/await."
+                }
+            ],
+            "explanation": ""
+        },
+        {
+            "questionText": "Garampani sanctuary is located at?",
+            "options": [{
+                    "text": "Junagarh, Gujarat"
+                },
+                {
+                    "text": "Diphu, Assam",
+                    "correct": true
+                },
+                {
+                    "text": "Kohima, Nagaland"
+                },
+                {
+                    "text": "Gangtok, Sikkim"
+                }
+            ],
+            "explanation": ""
+        },
+        {
+            "questionText": "For which of the following disciplines is Nobel Prize awarded?",
+            "options": [{
+                    "text": "Physics and Chemistry"
+                },
+                {
+                    "text": "Physiology or Medicine"
+                },
+                {
+                    "text": "Literature, Peace and Economics"
+                },
+                {
+                    "text": "All of the above",
+                    "correct": true
+                }
+            ],
+            "explanation": ""
+        },
+        {
+            "questionText": "Hitler party which came into power in 1933 is known as?",
+            "options": [{
+                    "text": "Labour Party"
+                },
+                {
+                    "text": "Nazi Party",
+                    "correct": true
+                },
+                {
+                    "text": "Ku-Klux-Klan"
+                },
+                {
+                    "text": "Democratic Party"                  
+                }
+            ],
+            "explanation": ""
+        },
+        {
+            "questionText": "First human heart transplant operation conducted by Dr. Christiaan Barnard on Louis Washkansky, was conducted in?",
+            "options": [{
+                    "text": "1967",
+                    "correct": true
+                },
+                {
+                    "text": "1968"                  
+                },
+                {
+                    "text": "1958"
+                },
+                {
+                    "text": "1922"
+                }
+            ],
+            "explanation": ""
+        },
+        {
+            "questionText": "Golf player Vijay Singh belongs to which country?",
+            "options": [{
+                    "text": "USA"
+                },
+                {
+                    "text": "Fiji",
+                    "correct": true
+                },
+                {
+                    "text": "India"
+                },
+                {
+                    "text": "UK"
+                }
+            ],
+            "explanation": ""
+        },
+        {
+            "questionText": "Federation Cup, World Cup, Allywyn International Trophy and Challenge Cup are awarded to winners of?",
+            "options": [{
+                    "text": "Tennis"                  
+                },
+                {
+                    "text": "Volleyball",
+                    "correct": true
+                },
+                {
+                    "text": "Basketball"
+                },
+                {
+                    "text": "Cricket"
+                }
+            ],
+            "explanation": ""
+        }
+    ]
+}
